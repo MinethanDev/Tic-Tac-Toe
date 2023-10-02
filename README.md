@@ -14,4 +14,5 @@ Just type `pip install pygame` in your terminal and enjoy !
 
 ## License
 [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/4.0//)
+
 ![Logo](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)
