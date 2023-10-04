@@ -44,14 +44,14 @@ def verifier_gagnant():
     '''
     Fonction renvoyant le symbole du gagnant si trois même symboles sont alignés
     '''
-    # Check lignes
+    # Check lignes / colonnes
     for i in range(3):
         if grille[i][0] == grille[i][1] == grille[i][2] != "":
             return grille[i][0]
         if grille[0][i] == grille[1][i] == grille[2][i] != "":
             return grille[0][i]
 
-    # Check colonnes
+    # Check diagonales
     if grille[0][0] == grille[1][1] == grille[2][2] != "":
         return grille[0][0]
     if grille[0][2] == grille[1][1] == grille[2][0] != "":
@@ -79,8 +79,7 @@ while True:
     fenetre.fill((255, 255, 255))
     afficher_grille()
 
-    gagnant = verifier_gagnant()
-    if gagnant:
+    if verifier_gagnant():
         font = pygame.font.Font(None, 36)
         texte = font.render("Le joueur {0} a gagné !".format(gagnant), True, ROUGE, NOIR)
         fenetre.blit(texte, ((largeur - texte.get_width()) // 2, (hauteur - texte.get_height()) // 2))
