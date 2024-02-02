@@ -81,7 +81,7 @@ while True:
 
     if verifier_gagnant():
         font = pygame.font.Font(None, 36)
-        texte = font.render("Le joueur {0} a gagné !".format(gagnant), True, ROUGE, NOIR)
+        texte = font.render("Le joueur {0} a gagné !".format(verifier_gagnant()), True, ROUGE, NOIR)
         fenetre.blit(texte, ((largeur - texte.get_width()) // 2, (hauteur - texte.get_height()) // 2))
 
     pygame.display.flip()
